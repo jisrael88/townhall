@@ -6,11 +6,12 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 100%;
-	width: 600px;
+	clear: left;
+	width: 99%;
+	max-width: 960px;
 	margin: 0 auto 0;
 	border: 3px solid #931420;
 	background-color: #fffded;
-	width: 800px;
 }
 
 html {
@@ -21,6 +22,7 @@ header {
 	border-bottom: 3px solid #931420;
 	padding-top: 1.5em;
 	padding-bottom: 2em;
+	padding-left: 1em;
 	background-image: linear-gradient(30deg,#f6bb73 0%,#f6bb73 30%,white 50%,#f6bb73 80%,#f6bb73 100%);
 }
 header h2{
@@ -29,19 +31,19 @@ header h2{
 }
 header img {
 	float: left;
-	padding-right: 30px;
-	padding-left: 30px;
+	padding-right: 0.105%;
+	padding-left: 0.105%;
 }
 /* the styles for the section */
 section {
-	width: 525px;
+	width: 58.6875%;
 	float: right;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 2.84%;
+	padding-right: 2.84%;
 	padding-bottom: 20px;
 }
 aside {
-	width: 215px;
+	width: 22.3959%;
 	float: right;
 	padding-left: 20px;
 	padding-bottom: 20px;
@@ -63,9 +65,10 @@ main article {
 	border-bottom: solid 2px #800000;
 }
 article img {
+	max-width: 40%;
+	min-width: 150px;
 	float: right;
-	margin-top: 5px;
-	margin-left: 5px;
+	margin: 1px;
 	border: solid 1px black; 
 }
 article h2{
@@ -87,6 +90,7 @@ main h3{
 }
 main img {
 	padding-bottom: 1em;
+	padding-top: 1em;
 }
 main p {
 	padding-bottom: .5em;
@@ -110,15 +114,17 @@ a:hover {
 /* the styles for the nav menu*/
 #nav_menu ul {
 	list-style-type: none;
+	position: relative;
 	margin: 0;
 	padding: 0;
 }
 #nav_menu ul li {
 	float: left;
+	width: 13.334%;
 }
 #nav_menu ul li a {
 	display: block;
-	width: 160px;
+	width: 100%;
 	text-align: center;
 	padding-bottom: 1em;
 	padding-top: 1em;
@@ -139,10 +145,11 @@ a:hover {
 #nav_menu ul ul {
 	display: none;
 	position: absolute;
-	top: 100%;
+	top: 13.334%;
 }
 #nav_menu ul ul li {
 	float: none;
+	width: 100%;
 }
 #nav_menu ul li:hover > ul {
 	display: block;
@@ -155,9 +162,27 @@ a:hover {
 #list {
 	list-style-type: circle;
 }
-
-
-
+/* section rule set */
+main section {
+	float: none;
+	width: 94.32%;
+}
+/* aside rule set */
+aside {
+	float: none;
+	padding-right: 2.84%;
+	width: 94.32%;
+}
+/* max width of img changed */
+article img {
+	max-width: 30%;
+}
+/* div properties to arrange speakers in 2 columns */
+aside div {
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	column-count: 2;
+}
 /* the styles for the footer */
 footer p{
 	text-align: center;
@@ -166,4 +191,22 @@ footer p{
 	padding-top: 1em;
 	padding-bottom: 1em;
 	clear: both;
+}
+/* media query for portrait view */
+@media only screen and (max-width: 959px) {
+	main section h1 {
+		font-size: 135%;
+	}
+	main section h2 {
+		font-size: 120%;
+	}
+}
+/* media query for landscape oreintation */
+@media only screen and (max-width: 767px) {
+	header img {
+		float: none;
+	}
+	header {
+		text-align: center;
+	}
 }
