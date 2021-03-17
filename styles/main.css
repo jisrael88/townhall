@@ -162,6 +162,10 @@ a:hover {
 #list {
 	list-style-type: circle;
 }
+/* Mobile Menu*/
+#mobilemenu {
+	display: none;
+}
 /* section rule set */
 main section {
 	float: none;
@@ -208,5 +212,14 @@ footer p{
 	}
 	header {
 		text-align: center;
+	}
+	#nav_menu {
+		display: none;
+	}
+	#mobilemenu {
+		display: block;
+	}
+	.slicknav_menu {
+		background-color: #800000 !important;
 	}
 }

@@ -9,6 +9,15 @@
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/main.css">
+	<!-- Mobile Menu -->
+	<link rel="stylesheet" href="styles/slicknav.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+	});
+	</script>
 </head>
 
 <body>
@@ -18,6 +27,7 @@
 		<h3>Celebrating our 75<sup>th</sup> Year</h3>
 	</header>
 <!--Horizontal Nav Bar Menu-->
+	<nav id="mobilemenu"></nav>
 	<nav id="nav_menu">
 		<ul>
 			<li><a href="index.html" class="current">Home</a></li>
