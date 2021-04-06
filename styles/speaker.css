@@ -145,6 +145,9 @@ aside h3 {
 aside img {
 	padding-bottom: 1em;
 }
+#printButton {
+	margin-top: 10px;
+}
 
 /* the styles for the footer */
 footer {
